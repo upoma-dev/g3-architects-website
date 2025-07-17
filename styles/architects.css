@@ -12,26 +12,30 @@
     display: flex;
 }
 
-.text-primary{
-    color:#FF900E ;
+.text-primary {
+    color: #FF900E;
 }
+
 /*dark-2*/
 .text-gray {
     color: rgba(66, 66, 66, 1);
 }
+
 /*dark-3*/
 .text-light-gray {
     color: #727272;
 }
 
-main{
+main {
     max-width: 1440px;
     margin: 0 auto;
 }
-main > section{
+
+main>section {
     margin-top: 130px;
 }
-.section-title{
+
+.section-title {
 
     font-size: 2.8rem;
     font-weight: 700;
@@ -102,29 +106,90 @@ main > section{
     width: 100%;
     /*image take responsive korse width 100% korai soto boro jai    kora hok na keno ta pura jaiga ta nebe*/
 }
+
 /*team and features related styles*/
-.teams{
+.teams {
     align-items: center;
 }
 
 
-.team-img-container{
+.team-img-container {
     display: grid;
-    grid-template-columns:repeat(2, 1fr) ;
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 }
 
-.our-features{
+.our-features {
     margin-left: 130px;
     max-width: 530px;
 }
-.feature-title{
-    font-size:2.8rem;
+
+.feature-title {
+    font-size: 2.8rem;
     font-weight: 700;
 }
-#quick-list{
-    font-weight:500 ;
+
+#quick-list {
+    font-weight: 500;
 }
+
+
+/*some facts related styles*/
+.facts-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+.fact-card {
+    border: 1px solid rgba(255, 144, 14, 1);
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.fact-number {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.fact-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.fact-discription {
+    max-width: 540px;
+}
+
+/*sponsor related styles*/
+.sponsor-info {
+    max-width: 540px;
+    margin: 50 auto;
+    text-align: center;
+}
+
+.sponsor-companies {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+}
+
+.sponsor-companies {
+    filter: grayscale(100%);
+}
+
+
+
+
+
 /*responsive media query*/
 
 @media screen and(max-width:576xp) {
@@ -134,54 +199,44 @@ main > section{
     .teams {
         flex-direction: column;
     }
-    .team-img-container{
-        grid-template-columns: repeat(1,1fr);
+
+    .team-img-container,
+    .facts-container,
+    .sponsor-companies {
+        grid-template-columns: repeat(1, 1fr);
     }
-    .our-features{
-     margin-left: 20px;
+
+    .facts-container {
+        justify-items: center;
+        gap: 24px;
+    }
+
+    .sponsor-companies {
+        justify-items: center;
+        gap: 50px;
+    }
+
+    .our-features {
+        margin-left: 20px;
     }
 }
-
-/*some facts related styles*/
-.facts-container{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-   
-}
-.fact-card{
-    border:1px solid rgba(255, 144, 14, 1);
-     width: 240px;
-    height:240px;
-    border-radius: 8px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-
-}
-.fact-number{
-    font-size: 2.8rem;
-    font-weight: 600;
-    margin-top: 5px;
-    margin-bottom:10px ;
-}
-.fact-name{
-    font-size:1.25rem ;
-    font-weight: 600;
-    margin-top: 10px;
-}
-.fact-discription{
-    max-width: 540px;
-}
-
 
 /*medium size device*/
-@media screen and(min-width:576xp) and (max-width:992px){
+@media screen and(min-width:576xp) and (max-width:992px) {
 
-.teams{
-    flex-direction: column;
-}
-.our-features{
-    margin: 50px auto;
+    .teams {
+        flex-direction: column;
+    }
+
+    .our-features {
+        margin: 50px auto;
+    }
+
 }
 
+.sponsor-companies,
+.facts-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    justify-items: center;
 }
