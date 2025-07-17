@@ -12,6 +12,31 @@
     display: flex;
 }
 
+.text-primary{
+    color:#FF900E ;
+}
+/*dark-2*/
+.text-gray {
+    color: rgba(66, 66, 66, 1);
+}
+/*dark-3*/
+.text-light-gray {
+    color: #727272;
+}
+
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+main > section{
+    margin-top: 130px;
+}
+.section-title{
+
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
 /*header styles*/
 
 /*navbar styles*/
@@ -37,14 +62,7 @@
 
 }
 
-/*dark-2*/
-.text-gray {
-    color: rgba(66, 66, 66, 1);
-}
 
-.text-light-gray {
-    color: #727272;
-}
 
 .bg-light {
     background-color: rgba(255, 144, 14, 0.1);
@@ -84,14 +102,53 @@
     width: 100%;
     /*image take responsive korse width 100% korai soto boro jai    kora hok na keno ta pura jaiga ta nebe*/
 }
+/*team and features related styles*/
+.teams{
+    align-items: center;
+}
 
 
+.team-img-container{
+    display: grid;
+    grid-template-columns:repeat(2, 1fr) ;
+    gap: 24px;
+}
+
+.our-features{
+    margin-left: 130px;
+    max-width: 530px;
+}
+.feature-title{
+    font-size:2.8rem;
+    font-weight: 700;
+}
+#quick-list{
+    font-weight:500 ;
+}
 /*responsive media query*/
 
 @media screen and(max-width:576xp) {
 
     .nav-links,
-    .navbar {
+    .navbar,
+    .teams {
         flex-direction: column;
     }
+    .team-img-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .our-features{
+     margin-left: 20px;
+    }
+}
+/*medium size device*/
+@media screen and(min-width:576xp) and (max-width:992px){
+
+.teams{
+    flex-direction: column;
+}
+.our-features{
+    margin: 50px auto;
+}
+
 }
